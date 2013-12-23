@@ -1,0 +1,19 @@
+[user]
+  name = Klaus Meyer
+  email = spam@klaus-meyer.net
+[color]
+  ui = auto
+[pack]
+  hreads = 0
+[alias]
+  st = status
+  co = checkout
+  br = branch
+  ap = add -p
+[core]
+  excludesfile = /Users/meyer/.gitignore
+[branch]
+  autosetuprebase = always
+[push]
+  default = simple
+
