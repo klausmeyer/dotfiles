@@ -4,7 +4,7 @@
 [color]
   ui = auto
 [pack]
-  hreads = 0
+  threads = 0
 [alias]
   st = status
   co = checkout
