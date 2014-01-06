@@ -27,7 +27,7 @@ Files:
 ## 2. vim
 
 My vim config is optimized for ruby on rails development, but can be also used as a system-wide default.
-I use the Tomorrow Night Eighties Theme.
+I use the Tomorrow Night Theme.
 
 The following plugins are (down-)loaded on the first run of vim:
 
@@ -71,7 +71,7 @@ Git is configured for my default workflow and I've also created a global ignore 
   * `git ap` => `git add -p`
 * Global gitignore file (you will need to change the path)
 * Use rebase instead of merge on pull
-* Use new `simple` push strategy (default on new git versions)
+* Use `tracking` push strategy
 
 Files:
 
