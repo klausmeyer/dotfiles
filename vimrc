@@ -5,6 +5,7 @@ syntax on                    " enable symatx highlighting
 set nocompatible             " stops vim from behaving in a strongly vi -compatible way
 set expandtab                " use spaces instead of real-tabs
 set tabstop=2                " define how many columns a tab counts for
+set bs=2                     " define how many columns a backspace counts for
 set shiftwidth=2             " control how many columns text is indented with the reindent operations
 set softtabstop=2            " control how many columns vim uses when one hit tab in insert mode
 set autoindent               " copy the indentation from the previous line, when starting a new line
