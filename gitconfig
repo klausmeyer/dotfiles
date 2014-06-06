@@ -25,5 +25,4 @@
   tool = vimdiff
 [merge]
   tool = vimdiff
-  ff = false
-
+  ff = true
