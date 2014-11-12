@@ -1,9 +1,9 @@
-# dotfiles v2
+# dotfiles
 
-My dotfiles - refactored and improved
+My dotfiles.
 
 ```bash
-curl https://raw.github.com/klausmeyer/dotfiles_v2/master/setup.sh | bash
+curl https://raw.github.com/klausmeyer/dotfiles/master/setup.sh | bash
 ```
 
 ## Index
