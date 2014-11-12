@@ -12,7 +12,7 @@ then
   exit 2
 fi
 
-git clone --recurse https://github.com/klausmeyer/dotfiles_v2.git "$HOME/.dotfiles"
+git clone --recurse https://github.com/klausmeyer/dotfiles.git "$HOME/.dotfiles"
 
 function create_link {
   element=$1
