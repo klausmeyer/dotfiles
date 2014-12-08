@@ -16,8 +16,8 @@ set ignorecase smartcase     " case insensitive search
 set cursorline               " highlight the current line
 set number                   " show line numbers
 set hlsearch                 " highlight matches on search
-set invlist                  " show hidden chars (spaces, tabs, ...)
-set listchars=tab:→→,trail:· " set replacements for hidden chars
+set list
+set listchars=tab:▸\ ,eol:¬
 
 "
 " turn filetype detection on
@@ -48,10 +48,12 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
+Bundle 'godlygeek/tabular'
 Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'vim-ruby/vim-ruby'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
 
 if install_bundles == 0
   echo "Installing Bundles, please ignore key map error messages"
