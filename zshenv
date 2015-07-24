@@ -1,17 +1,11 @@
 # set path
-PATH="$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
 # load perlbrew, if installed
 if [[ -f "$HOME/.perlbrew/etc/bashrc" ]]
 then
-  export PERLBREW_ROOT=$HOME/.perlbrew
-  source $HOME/.perlbrew/etc/bashrc
-fi
-
-# load rvm, if installed
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]
-then
-  source "$HOME/.rvm/scripts/rvm"
+ export PERLBREW_ROOT=$HOME/.perlbrew
+ source $HOME/.perlbrew/etc/bashrc
 fi
 
 # fix vim colorscheme in tmux by re-setting screen-variable
