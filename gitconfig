@@ -12,6 +12,8 @@
   ap = add -p
   dw = diff --word-diff
   dc = diff --cached
+  rh = reset --hard HEAD
+  cf = clean -df
 [core]
   editor = vim
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
