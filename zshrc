@@ -18,3 +18,5 @@ source $ZSH/oh-my-zsh.sh
 
 # set EDITOR to vim
 export EDITOR=vim
+
+plugins=(docker)
