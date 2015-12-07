@@ -12,7 +12,7 @@
   ap = add -p
   dw = diff --word-diff
   dc = diff --cached
-  rh = reset --hard HEAD
+  rh = reset --hard
   cf = clean -df
 [core]
   editor = vim
