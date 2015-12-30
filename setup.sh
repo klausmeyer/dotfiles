@@ -31,7 +31,6 @@ create_link zshrc
 create_link zshenv
 create_link vimrc
 create_link vim
-create_link tmux.conf
 create_link gitconfig
 create_link gitignore
 

@@ -10,8 +10,7 @@ curl https://raw.github.com/klausmeyer/dotfiles/master/setup.sh | bash
 
 1. zsh
 2. vim
-3. tmux
-4. git
+3. git
 
 ## 1. zsh
 
@@ -42,21 +41,6 @@ Files:
 * vimrc
 * vim/colors/Tomorrow-Night.vim
 * vim/colors/Tomorrow-Night-Eighties.vim
-
-## 3. tmux
-
-I've configured tmux to behave like screen and tweeked the styling a bit.
-
-* Use `ctrl + a` instead of `ctrl + b` as hotkey
-* Use `|` for hsplit and `-` for vsplit
-* Use vim style keybinding for navigation in panes (h, j, k, l)
-* Styled status bar
-  * Show session name on the left side
-  * Show date on the right side
-
-Files
-
-* tmux.conf
 
 ## 4. git
 
