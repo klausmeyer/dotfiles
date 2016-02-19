@@ -33,6 +33,7 @@ create_link vimrc
 create_link vim
 create_link gitconfig
 create_link gitignore
+create_link tmux.conf
 
 if [[ ! -x "$HOME/.oh-my-zsh/custom/themes" ]]
 then
