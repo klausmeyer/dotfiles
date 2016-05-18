@@ -3,7 +3,7 @@
 My dotfiles.
 
 ```bash
-curl https://raw.github.com/klausmeyer/dotfiles/master/setup.sh | bash
+curl -sSL https://raw.github.com/klausmeyer/dotfiles/master/setup.sh | bash
 ```
 
 ## Index
