@@ -18,6 +18,7 @@ set number                   " show line numbers
 set hlsearch                 " highlight matches on search
 set list
 set listchars=tab:▸\ ,eol:¬
+set mouse=a
 
 "
 " turn filetype detection on
