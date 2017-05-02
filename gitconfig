@@ -15,6 +15,7 @@
   rh = reset --hard
   cf = clean -df
   cp = cherry-pick
+  fap = fetch --all -p
 [core]
   editor = vim
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
