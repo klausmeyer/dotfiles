@@ -31,4 +31,4 @@
   tool = vimdiff
   ff = true
 [commit]
-	gpgsign = true
+  gpgsign = true
