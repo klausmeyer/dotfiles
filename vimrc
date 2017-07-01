@@ -1,4 +1,35 @@
 "
+" install vundle plugins
+"
+let install_bundles=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+
+if !filereadable(vundle_readme)
+  echo "Installing Vundle.."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  let install_bundles=0
+endif
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'gmarik/vundle'
+Bundle 'godlygeek/tabular'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
+
+if install_bundles == 0
+  echo "Installing Bundles, please ignore key map error messages"
+  echo ""
+  :BundleInstall
+endif
+
+"
 " editor options
 "
 syntax on                    " enable symatx highlighting
@@ -31,36 +62,6 @@ filetype plugin on
 " load color scheme
 "
 colorscheme Tomorrow-Night
-
-"
-" install vundle plugins
-"
-let install_bundles=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
-
-if !filereadable(vundle_readme)
-  echo "Installing Vundle.."
-  echo ""
-  silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-  let install_bundles=0
-endif
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'godlygeek/tabular'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-
-if install_bundles == 0
-  echo "Installing Bundles, please ignore key map error messages"
-  echo ""
-  :BundleInstall
-endif
 
 "
 " key bindings
