@@ -15,7 +15,8 @@
       ".byebug_history"
     ]
     telemetryConsent: "no"
-  editor: {}
+  editor:
+    showInvisibles: true
   "exception-reporting":
     userId: "f8807593-31ff-46ee-9976-4fdb46212641"
   "tree-view":
