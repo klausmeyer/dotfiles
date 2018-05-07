@@ -1,5 +1,5 @@
 # set path
-PATH="/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
+PATH="~/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
 # load perlbrew, if installed
 if [[ -f "$HOME/.perlbrew/etc/bashrc" ]]
