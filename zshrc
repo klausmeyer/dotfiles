@@ -11,7 +11,7 @@ DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 
 # no auto title
-DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
