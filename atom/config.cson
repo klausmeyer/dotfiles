@@ -1,8 +1,11 @@
 "*":
+  "autocomplete-plus":
+    autoActivationDelay: 500
   core:
     disabledPackages: [
       "wrap-guide"
       "spell-check"
+      "language-hyperlink"
     ]
     ignoredNames: [
       ".git"
@@ -14,6 +17,7 @@
       "desktop.ini"
       ".byebug_history"
     ]
+    openEmptyEditorOnStart: false
     projectHome: "/Users/meyer/Code"
     telemetryConsent: "no"
   editor:
