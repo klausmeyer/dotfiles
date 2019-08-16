@@ -19,7 +19,7 @@ $light_blue%n\
 $white at\
 $light_blue %m\
 $white in\
-$light_blue %~\
+$light_blue %(4~|.../%3~|%~)\
 $dark_blue ]\
 $dark_blue $(which rvm-prompt > /dev/null && rvm-prompt)\
 $dark_blue $(git_prompt_info)
