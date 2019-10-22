@@ -26,6 +26,7 @@
 [push]
   default = tracking
 [diff]
+  noprefix = true
   tool = vimdiff
 [merge]
   tool = vimdiff
