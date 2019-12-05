@@ -22,6 +22,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'joshdick/onedark.vim'
 
 if install_bundles == 0
   echo "Installing Bundles, please ignore key map error messages"
@@ -61,7 +62,8 @@ filetype plugin on
 "
 " load color scheme
 "
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night-Eighties
+colorscheme onedark
 
 "
 " key bindings
