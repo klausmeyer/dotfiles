@@ -32,7 +32,6 @@ create_link oh-my-zsh
 create_link zshrc
 create_link zshenv
 create_link vimrc
-create_link vim
 create_link gitconfig
 create_link gitignore
 create_link tmux
