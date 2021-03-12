@@ -1,83 +1,49 @@
-"
-" install vundle plugins
-"
-let install_bundles=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+set autoindent
+set bs=2
+set cursorline
+set expandtab
+set hlsearch
+set ignorecase smartcase
+set laststatus=2
+set list
+set listchars=tab:»\ ,trail:· ",eol:¬
+set mouse=a
+set nocompatible
+set number
+set shiftwidth=2
+set showmatch
+set smartindent
+set softtabstop=2
+set tabstop=2
 
-if !filereadable(vundle_readme)
-  echo "Installing Vundle.."
-  echo ""
-  silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-  let install_bundles=0
-endif
-set rtp+=~/.vim/bundle/vundle/
+syntax on
+
+autocmd BufWritePre * :%s/\s\+$//e
+
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'gmarik/vundle'
-Bundle 'godlygeek/tabular'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'godlygeek/tabular'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+
 Bundle 'joshdick/onedark.vim'
 
-if install_bundles == 0
-  echo "Installing Bundles, please ignore key map error messages"
-  echo ""
-  :BundleInstall
-endif
+colorscheme onedark
 
-"
-" editor options
-"
-syntax on                    " enable symatx highlighting
-set nocompatible             " stops vim from behaving in a strongly vi -compatible way
-set expandtab                " use spaces instead of real-tabs
-set tabstop=2                " define how many columns a tab counts for
-set bs=2                     " define how many columns a backspace counts for
-set shiftwidth=2             " control how many columns text is indented with the reindent operations
-set softtabstop=2            " control how many columns vim uses when one hit tab in insert mode
-set autoindent               " copy the indentation from the previous line, when starting a new line
-set smartindent              " automatically inserts one extra level of indentation in some cases
-set laststatus=2             " display the status line always
-set showmatch                " highlight matching parenthesis
-set ignorecase smartcase     " case insensitive search
-set cursorline               " highlight the current line
-set number                   " show line numbers
-set hlsearch                 " highlight matches on search
-set list
-set listchars=tab:▸\ ,eol:¬
-set mouse=a
-
-"
-" turn filetype detection on
-"
 filetype on
 filetype indent on
 filetype plugin on
 
-"
-" load color scheme
-"
-" colorscheme Tomorrow-Night-Eighties
-colorscheme onedark
+nmap <silent> <F9> :NERDTreeToggle<CR>
 
-"
-" key bindings
-"
-
-" open NerdTree on F9 key
-nmap <silent> <F9> :NERDTreeTabsToggle<CR>
-
-" toggle insert mode (autoindent) using F2 key
 set pastetoggle=<F2>
 
-"
-" macros
-"
-
-" remove trailing whitespaces on save
-autocmd BufWritePre * :%s/\s\+$//e
+if executable("ag")
+  let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+endif
