@@ -35,6 +35,8 @@ Bundle 'joshdick/onedark.vim'
 
 colorscheme onedark
 
+hi Normal guibg=NONE ctermbg=NONE
+
 filetype on
 filetype indent on
 filetype plugin on
