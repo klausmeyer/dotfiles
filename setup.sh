@@ -42,8 +42,13 @@ if [[ ! -x "$HOME/.oh-my-zsh/custom/themes" ]]
 then
   mkdir "$HOME/.oh-my-zsh/custom/themes"
 fi
+
 ln -s "$HOME/.zsh/km.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/km.zsh-theme"
 
-vim
+mkdir -p "$HOME/.vim/bundle"
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+vim +PluginInstall +qall
 
 exit 0
