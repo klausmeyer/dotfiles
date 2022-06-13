@@ -50,7 +50,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'vim-ruby/vim-ruby'
 
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-endwisd'
+Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 
