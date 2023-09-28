@@ -25,8 +25,6 @@ function create_link {
   fi
 }
 
-mkdir -l ~/.atom
-
 create_link zsh
 create_link oh-my-zsh
 create_link zshrc
@@ -36,7 +34,6 @@ create_link gitconfig
 create_link gitignore
 create_link tmux
 create_link tmux.conf
-create_link atom/config.cson
 
 if [[ ! -x "$HOME/.oh-my-zsh/custom/themes" ]]
 then
