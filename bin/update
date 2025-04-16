@@ -1,0 +1,29 @@
+#!/bin/bash
+
+set -e
+# set -x
+
+case "$(uname)" in
+
+  # Linux
+  Linux)
+    sudo apt-get update
+    sudo apt-get full-upgrade
+    sudo apt-get autoremove
+    sudo apt-get clean
+    ;;
+
+  # Mac
+  Darwin)
+    brew update
+    brew upgrade
+    brew cleanup
+    ;;
+
+  # Unknown
+  *)
+    echo "Unknown platform"
+    exit 1
+  ;;
+
+esac
