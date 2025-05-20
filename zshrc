@@ -13,6 +13,8 @@ DISABLE_LS_COLORS="true"
 # no auto title
 # DISABLE_AUTO_TITLE="true"
 
+plugins=(docker kubectl git)
+
 # load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
