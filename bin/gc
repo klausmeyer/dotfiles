@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'open3'
+
+COLOUR_RED    = 31
+COLOUR_GREEN  = 32
+COLOUR_YELLOW = 33
+
+ROOT = '/Users/meyer/Code/github.com'
+MAXDEPTH = 10
+
+def colour(string, code)
+  puts "\e[#{code}m#{string}\e[0m"
+end
+
+projects = Dir.glob("#{ROOT}/**/.git").map { |p| p.delete_suffix('/.git') }
+
+projects.each do |path|
+  colour "Project: #{path}", COLOUR_YELLOW
+
+  shell = -> (cmd) do
+    puts "[+] #{cmd}"
+    output, status = Open3.capture2e(cmd, chdir: path)
+    puts output if output.length > 0
+
+    if status.success?
+      status_colour = COLOUR_GREEN
+    else
+      status_colour = COLOUR_YELLOW
+    end
+
+    colour "[i] Status: #{status}", status_colour
+
+    output
+  end
+
+  shell.call "git fetch --all --prune --prune-tags"
+
+  branch = if File.file?("#{path}/.git/refs/heads/main")
+    'main'
+  else
+    'master'
+  end
+
+  shell.call "git checkout -B #{branch}"
+  shell.call "git reset --hard origin/#{branch}"
+
+  shell.call "git branch"
+  shell.call "git branch | grep --invert-match #{branch} | xargs git branch --delete --force"
+
+  puts '-' * 80
+end
